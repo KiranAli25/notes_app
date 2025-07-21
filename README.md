@@ -2,7 +2,6 @@
 
 A beautiful, modern web application for managing notes with a sleek dark/light mode interface. Built with Flask, SQLite, and modern CSS with smooth animations.
 
-![Notes App Screenshot](https://via.placeholder.com/800x400/667eea/ffffff?text=Notes+Web+App)
 
 ## ✨ Features
 
