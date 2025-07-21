@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Edit Note</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<header>
+  <div class="header-content">
+    <h1>Edit Note</h1>
+    <button id="darkModeToggle" class="dark-mode-toggle">
+      <span id="toggleIcon">🌙</span>
+      <span id="toggleText">Dark Mode</span>
+    </button>
+  </div>
+</header>
+
+<div class="container">
+  <section class="form-section">
+    <h2>Edit Note</h2>
+    <form action="" method="POST" class="note-form">
+      <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" id="title" name="title" value="{{ note[1] }}" required>
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea id="content" name="content" required>{{ note[2] }}</textarea>
+      </div>
+      <div style="display: flex; gap: 1rem; align-items: center;">
+        <button type="submit" class="btn btn-primary">
+          <span>💾</span>
+          Update Note
+        </button>
+        <a href="{{ url_for('index') }}" class="btn btn-warning">
+          <span>←</span>
+          Back to Home
+        </a>
+      </div>
+    </form>
+  </section>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
