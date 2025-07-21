@@ -199,17 +199,6 @@ pip install flask
 python app.py --port 8080
 ```
 
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🙏 Acknowledgments
 
@@ -235,8 +224,5 @@ This project demonstrates:
 - **Real-time search** functionality
 - **Clean code structure** and best practices
 
-Perfect for portfolios, learning, or as a starting point for larger applications!
 
----
-
-**Made with ❤️ and ☕ by [Your Name]** 
+**Made with ❤️ and ☕ by Kiran. 
