@@ -380,7 +380,51 @@ textarea {
   margin-bottom: 1rem;
 }
 
-/* Responsive Design */
+/* Responsive Design - Tablet (768px to 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .container {
+    padding: 1.5rem;
+  }
+  
+  header {
+    padding: 1.25rem 1.5rem;
+    border-radius: 0 0 18px 18px;
+  }
+  
+  h1 {
+    font-size: 2.25rem;
+  }
+  
+  .form-section,
+  .notes-section {
+    padding: 1.75rem;
+  }
+  
+  .search-section {
+    padding: 1.25rem;
+  }
+  
+  .notes-table th,
+  .notes-table td {
+    padding: 0.875rem;
+  }
+  
+  .note-content {
+    max-width: 250px;
+  }
+  
+  .note-actions {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .note-actions a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
+  }
+}
+
+/* Responsive Design - Mobile (up to 768px) */
 @media (max-width: 768px) {
   .container {
     padding: 1rem;
@@ -389,28 +433,236 @@ textarea {
   header {
     padding: 1rem;
     border-radius: 0 0 15px 15px;
+    margin-bottom: 1.5rem;
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   
   .header-content {
     flex-direction: column;
     gap: 1rem;
+    text-align: center;
   }
   
+  .dark-mode-toggle {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.8rem;
+  }
+  
+  .form-section,
+  .notes-section {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-section {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-section h2,
+  .notes-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  /* Mobile table layout */
   .notes-table {
-    font-size: 0.9rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-radius: 8px;
   }
   
-  .notes-table th,
+  .notes-table thead {
+    display: none;
+  }
+  
+  .notes-table tbody {
+    display: block;
+  }
+  
+  .notes-table tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    background: var(--bg-primary);
+    box-shadow: var(--shadow-light);
+  }
+  
   .notes-table td {
-    padding: 0.75rem 0.5rem;
+    display: block;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+  }
+  
+  .notes-table td:last-child {
+    border-bottom: none;
+  }
+  
+  .notes-table td::before {
+    content: attr(data-label) ": ";
+    font-weight: 600;
+    color: var(--text-secondary);
+    display: inline-block;
+    width: 80px;
+  }
+  
+  .note-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.25rem;
   }
   
   .note-content {
-    max-width: 150px;
+    max-width: none;
+    white-space: normal;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+  }
+  
+  .note-timestamp {
+    font-size: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .note-actions {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: flex-start;
+  }
+  
+  .note-actions a {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.75rem;
+    flex: 1;
+    text-align: center;
+    display: inline-block;
+    min-width: 0;
+  }
+  
+  /* Mobile form adjustments */
+  .note-form {
+    gap: 0.75rem;
+  }
+  
+  input[type="text"], 
+  textarea {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+  
+  textarea {
+    min-height: 100px;
+  }
+  
+  .btn {
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  /* Ensure action buttons in mobile are properly visible */
+  .note-actions .btn {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  /* Mobile search */
+  #searchInput {
+    padding: 0.875rem;
+    font-size: 1rem;
+  }
+  
+  /* Mobile empty state */
+  .empty-state {
+    padding: 2rem 1rem;
+  }
+  
+  .empty-state::before {
+    font-size: 3rem;
+  }
+}
+
+/* Responsive Design - Small Mobile (up to 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+  
+  header {
+    padding: 0.875rem;
+    margin-bottom: 1rem;
+  }
+  
+  h1 {
+    font-size: 1.5rem;
+  }
+  
+  .form-section,
+  .notes-section {
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+  }
+  
+  .search-section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-section h2,
+  .notes-section h2 {
+    font-size: 1.1rem;
+  }
+  
+  .search-section h2 {
+    font-size: 1rem;
+  }
+  
+  .notes-table td {
+    padding: 0.625rem 0.875rem;
+  }
+  
+  .note-actions {
+    flex-direction: column;
+    gap: 0.375rem;
+  }
+  
+  .note-actions a {
+    padding: 0.5rem;
+    font-size: 0.7rem;
+    display: inline-block;
+    min-width: 0;
+  }
+  
+  input[type="text"], 
+  textarea {
+    padding: 0.75rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+  
+  /* Ensure action buttons in small mobile are properly visible */
+  .note-actions .btn {
+    width: auto;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  #searchInput {
+    padding: 0.75rem;
   }
 }
 
